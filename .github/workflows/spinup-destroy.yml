@@ -15,6 +15,7 @@ env:
   #################################################
   ### REPLACE USERNAME WITH GH USERNAME         ###
   AZURE_WEBAPP_NAME: jvesthansen1990-ttt-app
+  AZURE_SUBSCRIBTION_ID: 'a29fdcfc-d81b-4de7-9dd0-54156b25d99a'
   #################################################
 
 jobs:
@@ -69,4 +70,4 @@ jobs:
       - name: Destroy Azure environment
         if: success()
         run: |
-          az group delete --name ${{env.AZURE_RESOURCE_GROUP}} --yes
+          az group delete --name ${{env.AZURE_RESOURCE_GROUP}} --subscription ${{ env.AZURE_SUBSCRIBTION_ID }}  --yes
