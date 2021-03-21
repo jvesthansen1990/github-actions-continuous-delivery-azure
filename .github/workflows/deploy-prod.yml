@@ -16,6 +16,7 @@ env:
   ### REPLACE USERNAME WITH GH USERNAME         ###
   AZURE_WEBAPP_NAME: jvesthansen1990-ttt-app
   DOCKER_IMAGE_NAME: jvesthansen1990-azure-ttt
+  IMAGE_REGISTRY_URL: docker.pkg.github.com
   #################################################
 
 jobs:
